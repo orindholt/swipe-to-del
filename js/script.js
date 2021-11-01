@@ -1,15 +1,17 @@
 const swipeElement = document.querySelectorAll(".swipe-text");
 
-let touchCordStart;
-let touchCordMove;
-
 swipeElement.forEach(element => {
+    let touchCordStart;
+    let touchCordMove;
     let childrenWidth = element.previousElementSibling.offsetWidth;
+
+    // touch start
     element.addEventListener("touchstart", (e) =>{
         touchCordStart = Math.floor(e.touches[0].clientX);
         console.log(touchCordStart);
     });
     
+    // touch move
     element.addEventListener("touchmove", (e) => {
         touchCordMove = Math.floor(e.touches[0].clientX);
         // move functionality 
@@ -19,6 +21,7 @@ swipeElement.forEach(element => {
         }
     });
     
+    // touch end
     element.addEventListener("touchend", (e) => {
         if(touchCordMove < touchCordStart-(childrenWidth / 2)){
             // snap to child
@@ -29,6 +32,7 @@ swipeElement.forEach(element => {
         }
     });
 
+    // delete button
     element.previousElementSibling.addEventListener("click", ()=>{
         element.parentElement.style.display = "none";
     });
@@ -38,7 +42,7 @@ swipeElement.forEach(element => {
 document.querySelector("#reset").addEventListener("click", ()=>{
     swipeElement.forEach(element => {
         element.parentElement.style.display = "";  
-        element.style.transform = "translateX(0px)";
+        element.style.transform = `translateX(${e.target.offsetLeft}px)`;
     })
 });
 
