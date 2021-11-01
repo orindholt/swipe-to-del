@@ -28,8 +28,8 @@ body {
     font-size: 2em;
     color: white;
     overflow-x: hidden;
-    background-color: cadetblue;
-    margin: 10px;
+    background-color: cornflowerblue;
+    margin-bottom: 10px;
 }
 
 .swipe-box > * {
@@ -50,6 +50,14 @@ body {
 
 .swipe-text {
     grid-area: 1/1/2/3;
-    background-color: cadetblue;
+    background-color: cornflowerblue;
     padding: 10px;
+}
+
+#reset {
+    border: 1px solid #0101;
+    padding: 10px;
+    background-color:darkorange;
+    color: white;
+    font-weight: 700;
 }

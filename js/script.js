@@ -34,3 +34,11 @@ swipeElement.forEach(element => {
         element.parentElement.style.display = "none";
     });
 });
+
+document.querySelector("#reset").addEventListener("click", ()=>{
+    swipeElement.forEach(element => {
+        element.parentElement.style.display = "";  
+        element.style.transform = "translateX(0px)";
+    })
+});
+
