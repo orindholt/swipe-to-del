@@ -12,14 +12,11 @@
 
 body {
     padding: 5%;
-    max-width: 1200px;
-    margin: 0 auto;
     font-family: var(--font);
 }
 
 .swipe-box {
     border: 1px solid #0101;
-    max-width: 400px;
     width: 100%;
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -43,7 +40,7 @@ body {
     grid-area: 1/2/2/3;
     justify-self: end;
     background-color: crimson;
-    font-size: 1em;
+    font-size: 1.25em;
     font-weight: 700;
     justify-content: center;
 }
@@ -52,10 +49,12 @@ body {
     grid-area: 1/1/2/3;
     background-color: cornflowerblue;
     padding: 10px;
+    transition: transform 0.15s;
 }
 
 #reset {
     border: 1px solid #0101;
+    border-radius: 50%;
     padding: 10px;
     background-color:darkorange;
     color: white;
