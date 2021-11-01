@@ -42,7 +42,7 @@ swipeElement.forEach(element => {
 document.querySelector("#reset").addEventListener("click", ()=>{
     swipeElement.forEach(element => {
         element.parentElement.style.display = "";  
-        element.style.transform = `translateX(${e.target.offsetLeft}px)`;
+        element.style.transform = "translateX(0px)";
     })
 });
 
