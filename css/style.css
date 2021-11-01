@@ -27,6 +27,7 @@ body {
     overflow-x: hidden;
     background-color: cornflowerblue;
     margin-bottom: 10px;
+    transition: transform 0.5s, opacity 0.5s;
 }
 
 .swipe-box > * {

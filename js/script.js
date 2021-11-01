@@ -34,7 +34,11 @@ swipeElement.forEach(element => {
 
     // delete button
     element.previousElementSibling.addEventListener("click", ()=>{
-        element.parentElement.style.display = "none";
+        element.parentElement.style.transform = "translateX(-100vw)";
+        element.parentElement.style.opacity = "0";
+        setTimeout(()=>{
+            element.parentElement.style.display = "none";
+        }, 500)
     });
 });
 
@@ -42,6 +46,8 @@ swipeElement.forEach(element => {
 document.querySelector("#reset").addEventListener("click", ()=>{
     swipeElement.forEach(element => {
         element.parentElement.style.display = "";  
+        element.parentElement.style.transform = "translateX(0)";
+        element.parentElement.style.opacity = "1";
         element.style.transform = "translateX(0px)";
     })
 });
