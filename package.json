@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/orindholt/swipe-to-del/issues"
   },
-  "homepage": "https://github.com/orindholt/swipe-to-del#readme"
+  "homepage": "https://github.com/orindholt/swipe-to-del#readme",
+  "dependencies": {
+    "install": "^0.13.0",
+    "npm": "^8.1.3"
+  }
 }
